@@ -3,7 +3,6 @@
 	"name": "blocks-course/text-box",
 	"title": "Text Box",
 	"category": "text",
-	"icon": "text-page",
 	"description": "A Box of Text.",
 	"key words": [
 		"text",

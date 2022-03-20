@@ -1,11 +1,7 @@
 <?php
 /**
  * Plugin Name:       Text Box
-<<<<<<< HEAD
- * Description:       A text box.
-=======
  * Description:       A Box of Text.
->>>>>>> 69a60f10c2da4c5e58bdb24e82204cbf63e3f1d0
  * Requires at least: 5.7
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -24,14 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-<<<<<<< HEAD
 function blocks_course_text_box_block_init() {
 	register_block_type_from_metadata( __DIR__ );
 }
 add_action( 'init', 'blocks_course_text_box_block_init' );
-=======
-function block_course_text_box_block_init() {
-	register_block_type_from_metadata( __DIR__ );
-}
-add_action( 'init', 'block_course_text_box_block_init' );
->>>>>>> 69a60f10c2da4c5e58bdb24e82204cbf63e3f1d0

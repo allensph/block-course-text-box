@@ -128,8 +128,8 @@ __webpack_require__.r(__webpack_exports__);
       cy: "250",
       r: "200"
     })),
-    background: "#fff",
-    foreground: "#f03"
+    background: '#fff',
+    foreground: '#f03'
   },
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]

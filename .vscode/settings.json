@@ -1,5 +1,9 @@
 {
     "editor.fontSize": 16,
+<<<<<<< HEAD
+=======
+    "window.zoomLevel": 1,
+>>>>>>> 69a60f10c2da4c5e58bdb24e82204cbf63e3f1d0
     "editor.formatOnSave": true,
     "[scss]": {
         "editor.formatOnSave": false,

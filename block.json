@@ -3,8 +3,8 @@
 	"name": "blocks-course/text-box",
 	"title": "Text Box",
 	"category": "text",
-	"description": "A text box.",
-	"keywords": [
+	"description": "A Box of Text.",
+	"key words": [
 		"text",
 		"paragraph",
 		"box"

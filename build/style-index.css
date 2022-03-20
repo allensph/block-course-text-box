@@ -7,6 +7,7 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+<<<<<<< HEAD
 .wp-block-blocks-course-text-box.text-box-align-right {
   text-align: right;
 }
@@ -15,6 +16,12 @@
 }
 .wp-block-blocks-course-text-box.text-box-align-left {
   text-align: left;
+=======
+.wp-block-create-block-boilerplate {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+>>>>>>> 69a60f10c2da4c5e58bdb24e82204cbf63e3f1d0
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -38,13 +38,13 @@ function Edit(_ref) {
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, {
     controls: [{
-      title: "Button 1",
-      icon: "admin-generic",
+      title: 'Button 1',
+      icon: 'admin-generic',
       isActive: true //onClick: () => console.log("Button 1 Clicked")
 
     }, {
-      title: "Button 2",
-      icon: "admin-collapse" //onClick: () => console.log("Button 2 Clicked")
+      title: 'Button 2',
+      icon: 'admin-collapse' //onClick: () => console.log("Button 2 Clicked")
 
     }]
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToolbarButton, {

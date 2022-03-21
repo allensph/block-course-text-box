@@ -4,20 +4,25 @@
 	"title": "Text Box",
 	"category": "text",
 	"description": "A Box of Text.",
-	"key words": [
+	"keywords": [
 		"text",
 		"paragraph",
 		"box"
 	],
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true,
+			"gradients": true
+		}
 	},
 	"textdomain": "text-box",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css",
 	"attributes": {
-		"text" : {
+		"text": {
 			"type": "string",
 			"source": "html",
 			"selector": "h4"
@@ -30,7 +35,12 @@
 			"type": "string"
 		},
 		"textColor": {
-			"type": "string"
+			"type": "string",
+			"default": "very-light-gray"
+		},
+		"gradient": {
+			"type": "string",
+			"default": "green-to-yellow"
 		}
 	}
 }

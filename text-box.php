@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function block_course_text_box_block_init() {
+function blocks_course_text_box_block_init() {
 	register_block_type_from_metadata( __DIR__ );
 }
-add_action( 'init', 'block_course_text_box_block_init' );
+add_action( 'init', 'blocks_course_text_box_block_init' );

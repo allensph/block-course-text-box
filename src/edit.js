@@ -3,54 +3,71 @@ import {
 	useBlockProps,
 	RichText,
 	BlockControls,
+	InspectorControls,
+	AlignmentToolbar,
+	PanelColorSettings,
+	ContrastChecker,
 } from '@wordpress/block-editor';
-
-import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
-
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { text } = attributes;
+	const { text, alignment, backgroundColor, textColor } = attributes;
+	const onChangeAlignment = (newAlignment) => {
+		setAttributes({ alignment: newAlignment });
+	};
+	const onChangeText = (newText) => {
+		setAttributes({ text: newText });
+	};
+	const onBackgroundColorChange = (newBgColor) => {
+		setAttributes({ backgroundColor: newBgColor });
+	};
+	const onTextColorChange = (newTextColor) => {
+		setAttributes({ textColor: newTextColor });
+	};
 	return (
 		<>
-			<BlockControls
-				controls={[
-					{
-						title: 'Button 1',
-						icon: 'admin-generic',
-						isActive: true,
-						//onClick: () => console.log("Button 1 Clicked")
-					},
-					{
-						title: 'Button 2',
-						icon: 'admin-collapse',
-						//onClick: () => console.log("Button 2 Clicked")
-					},
-				]}
-			>
-				<ToolbarGroup>
-					<ToolbarButton
-						title="Align Left"
-						icon="editor-alignleft"
-						//onClick={() => console.log('Align Left')}
+			<InspectorControls>
+				<PanelColorSettings
+					title={__('Color Settings', 'text-box')}
+					icon="admin-appearance"
+					initialOpen
+					disableCustomColors={false}
+					colorSettings={[
+						{
+							value: backgroundColor,
+							onChange: onBackgroundColorChange,
+							label: __('Background Color', 'text-box'),
+						},
+						{
+							value: textColor,
+							onChange: onTextColorChange,
+							label: __('Text Color', 'text-box'),
+						},
+					]}
+				>
+					<ContrastChecker
+						textColor={textColor}
+						backgroundColor={backgroundColor}
 					/>
-					<ToolbarButton
-						title="Align center"
-						icon="editor-aligncenter"
-						//onClick={() => console.log('Align Center')}
-					/>
-					<ToolbarButton
-						title="Align Right"
-						icon="editor-alignright"
-						//onClick={() => console.log('Align Right')}
-					/>
-				</ToolbarGroup>
+				</PanelColorSettings>
+			</InspectorControls>
+			<BlockControls>
+				<AlignmentToolbar
+					value={alignment}
+					onChange={onChangeAlignment}
+				/>
 			</BlockControls>
 			<RichText
-				{...useBlockProps()}
-				onChange={(value) => setAttributes({ text: value })}
+				{...useBlockProps({
+					className: `text-box-align-${alignment}`,
+					style: {
+						backgroundColor,
+						color: textColor,
+					},
+				})}
+				onChange={onChangeText}
 				value={text}
-				placeholder={__('Your text', 'text-box')}
+				placeholder={__('Your Text', 'text-box')}
 				tagName="h4"
 				allowedFormats={[]}
 			/>
